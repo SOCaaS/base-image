@@ -13,7 +13,7 @@ pipeline {
         stage('CleanUp') {
             steps {
                 echo "Cleaning Up"
-                sh 'docker image prune --all --filter "label!=type=base" -f'
+                sh 'docker image prune -f'
             }
         }
     }
