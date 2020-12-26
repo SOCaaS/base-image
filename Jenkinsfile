@@ -10,6 +10,12 @@ pipeline {
                 sh 'docker build --tag base/terraform:latest ./terraform'
            }
         }
+        stage('CleanUp') {
+            steps {
+                echo "Cleaning Up"
+                sh 'docker image prune --all --filter "label!=type=base" -f'
+            }
+        }
     }
     post {
         success {
