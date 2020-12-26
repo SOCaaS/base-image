@@ -7,6 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh 'echo ${BUILD_NUMBER}'
                 sh 'docker build --tag base/ubuntu:latest ./ubuntu'
+                sh 'docker build --tag base/terraform:latest ./terraform'
            }
         }
     }
