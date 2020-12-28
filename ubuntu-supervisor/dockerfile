@@ -1,0 +1,7 @@
+FROM base/ubuntu:latest
+
+LABEL type="base"
+
+RUN apt-get install -y supervisor
+
+CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
