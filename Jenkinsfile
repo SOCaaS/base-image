@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh 'echo ${BUILD_NUMBER}'
                 sh 'docker build --tag base/ubuntu:latest ./ubuntu'
-                sh 'docker build --tag base/ubuntu-supervisor:latest ./ubuntu'
+                sh 'docker build --tag base/ubuntu-supervisor:latest ./ubuntu-supervisor'
                 sh 'docker build --tag base/terraform:latest ./terraform'
                 sh 'docker build --tag base/openstack-client:latest ./openstack-client'
            }
