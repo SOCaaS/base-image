@@ -9,7 +9,7 @@ pipeline {
                 sh 'docker build --tag base/ubuntu:latest ./ubuntu'
                 sh 'docker build --tag base/ubuntu-supervisor:latest ./ubuntu-supervisor'
                 sh 'docker build --tag base/terraform:latest ./terraform'
-                sh 'docker build --tag base/openstack-client:latest ./openstack-client'
+                // sh 'docker build --tag base/openstack-client:latest ./openstack-client'
                 sh 'docker build --tag base/digitalocean-doctl:latest ./digitalocean-doctl'
            }
         }
